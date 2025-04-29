@@ -24,7 +24,7 @@ Management has raised concerns about potential unauthorized access to user accou
 
 ### 1. Searched Entra ID's `SigninLogs` Table
 
-Searched for instances within the last 7 days where a user logged in from more than 2 different locations. Discovered 39 incidents where this behavior was exhibited
+Searched for instances within the last 7 days where a user logged in from more than 2 different locations. Discovered 39 incidents where this login pattern was exhibited
 
 **Query used to locate events:**
 
@@ -67,8 +67,8 @@ Since no unauthorized activity was detected, no device isolation, user disableme
    
 ![image](https://github.com/user-attachments/assets/58b6ec90-a4d1-496c-80d1-0a467a63121d)
 
-2) Isolated the affected device and ran an antimalware scan
-3) Blocked malicious devices
+2) Isolating the affected device and running an antimalware scan
+3) Blocking malicious devices
 
 ---
 
