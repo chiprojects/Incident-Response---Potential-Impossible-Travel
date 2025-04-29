@@ -10,7 +10,7 @@
 
 ##  Scenario
 
-Management has raised concerns about potential unauthorized access to user accounts after receiving multiple "impossible travel" alerts. Sign-in logs for some accounts showed login attempts from geographically distant locations. Microsoft Entra ID( formerly known as Active Directory) flagged some of these attempts as suspicious due to the travel times between logins. At this stage, it is unclear whether any of the accounts have been compromised or if the activity results from typical user behavior. This investigation aims to detect any unauthorized access by reviewing login patterns, verifying user travel activity, and ensuring that accounts remain secure. Additionally, management is considering implementing geo-fencing and conditional access policies to mitigate future risks of unauthorized access.
+Management has raised concerns about potential unauthorized access to user accounts after receiving multiple "impossible travel" alerts. Sign-in logs for some accounts showed login attempts from geographically distant locations. Microsoft Entra ID( formerly known as Active Directory) flagged some of these attempts as suspicious due to the travel times between logins. At this stage, it is unclear whether any of the accounts have been compromised or if the activity results are from typical user behavior. This investigation aims to detect any unauthorized access by reviewing login patterns, verifying user travel activity, and ensuring that accounts remain secure. Additionally, management is considering implementing geo-fencing and conditional access policies to mitigate future risks of unauthorized access.
 
 ### High-Level Incident Response Plan
 
