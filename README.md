@@ -30,6 +30,8 @@ Searched for instances within the last 7 days where a user logged in from more t
 
 ![image](https://github.com/user-attachments/assets/ddc7576c-c25b-4bf1-acd8-dd0972895757)
 
+---
+
 ### 2. Reviewed `SigninLogs` Table
 
 Further investigated the accounts flagged with the highest number of instances. A total of four user accounts were identified: 
@@ -52,6 +54,36 @@ Observed all 4 accounts, and nothing alarming stood out. Logins were consistent 
 </ul>
 
 ![image](https://github.com/user-attachments/assets/0f1bdd26-63b8-4b9e-9294-b3789f7597e0)
+
+---
+
+### 3. No Remedial Action Was Taken
+
+Since no unauthorized activity was detected, no device isolation, user disablement, or forced password resets were necessary. If suspicious or malicious activity had been detected, the following procedures would have been implemented: 
+
+1) Disabling the affected Device in Entra ID:
+
+   **Ex.**
+   
+![image](https://github.com/user-attachments/assets/58b6ec90-a4d1-496c-80d1-0a467a63121d)
+
+2) Isolated the affected device and ran an antimalware scan
+3) Blocked malicious devices
+
+---
+
+### 4. Evaluated Implementation of Conditional Access Policies and Closed Out Incident
+
+Management explored the implementation of geo-fencing to restrict logins to specific geographical regions to better detect or block unexpected logins. Based on the team's analysis, the alerts were determined to be benign true positives due to legitimate travel or routine activity.
+
+Reviewed and completed write-up for incident resolution. Finalized reporting and closed out the incident in Microsoft Sentinel as a true benign positive.
+
+![image](https://github.com/user-attachments/assets/352dca63-6a5e-4a2d-bcfc-5e470765f243)
+
+
+
+
+
 
 
 
