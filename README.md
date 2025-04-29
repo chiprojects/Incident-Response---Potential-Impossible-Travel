@@ -10,7 +10,7 @@
 
 ##  Scenario
 
-Management has raised concerns about potential unauthorized access to user accounts after receiving multiple "impossible travel" alerts. Sign-in logs for some accounts showed login attempts from geographically distant locations. Microsoft Entra ID( formerly known as Active Directory) flagged some of these attempts as suspicious due to the travel times between logins. At this stage, it is unclear whether any of the accounts have been compromised or if the activity results from user behavior. This investigation aims to detect any unauthorized access by reviewing login patterns, verifying user travel activity, and ensuring that accounts remain secure. Additionally, management is considering implementing geo-fencing and conditional access policies to mitigate future risks of unauthorized access.
+Management has raised concerns about potential unauthorized access to user accounts after receiving multiple "impossible travel" alerts. Sign-in logs for some accounts showed login attempts from geographically distant locations. Microsoft Entra ID( formerly known as Active Directory) flagged some of these attempts as suspicious due to the travel times between logins. At this stage, it is unclear whether any of the accounts have been compromised or if the activity results from typical user behavior. This investigation aims to detect any unauthorized access by reviewing login patterns, verifying user travel activity, and ensuring that accounts remain secure. Additionally, management is considering implementing geo-fencing and conditional access policies to mitigate future risks of unauthorized access.
 
 ### High-Level Incident Response Plan
 
@@ -21,4 +21,38 @@ Management has raised concerns about potential unauthorized access to user accou
 ---
 
 ## Steps Taken
+
+### 1. Searched Entra ID's `SigninLogs` Table
+
+Searched for instances within the last 7 days where a user logged in from more than 2 different locations. Discovered 39 incidents where this behavior was exhibited
+
+**Query used to locate events:**
+
+![image](https://github.com/user-attachments/assets/ddc7576c-c25b-4bf1-acd8-dd0972895757)
+
+### 2. Reviewed `SigninLogs` Table
+
+Further investigated the accounts flagged with the highest number of instances. A total of four user accounts were identified: 
+
+**Query used to locate events:**
+
+![image](https://github.com/user-attachments/assets/653d3ad9-764d-4d90-b564-8a764d11a401)
+
+
+Observed all 4 accounts, and nothing alarming stood out. Logins were consistent with the amount of time it takes to travel from one city to another. Also, no suspicious activity was found; logins occurred from expected locations and timeframes.
+
+**Ex.: UserPrincipalName: 162e30755bc9a3e7dde8e...@....**
+
+➡️From Quebec, Montreal to Windsor, Ontario:
+
+<ul>
+<li>Drive: ~ 9 hours</li>
+<li>Flight: ~ 4 hours</li>
+<li>Time Elapsed between logins: 1 day, 7 hours</li>
+</ul>
+
+![image](https://github.com/user-attachments/assets/0f1bdd26-63b8-4b9e-9294-b3789f7597e0)
+
+
+
 
